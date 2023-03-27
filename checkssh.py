@@ -17,7 +17,7 @@ user_id = os.getenv("USER_ID")
 current_add = ''  
 def run_periodically(): 
     global current_add
-    threading.Timer(2700.0,run_periodically).start() #runs every 45 minutes/2700 seconds
+    threading.Timer(43200.0,run_periodically).start() #IP is checked every 12 hours / 43200 seconds
     if current_add != ip.get(): 
         current_add = ip.get() 
         #connecting to Telegram
