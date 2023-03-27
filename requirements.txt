@@ -1,0 +1,7 @@
+pywhatkit
+pyautogui
+pynput
+public_ip 
+telebot 
+telethon 
+python-dotenv
