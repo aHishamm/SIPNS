@@ -1,8 +1,7 @@
-import telebot
 from telethon.sync import TelegramClient
 from telethon.tl.types import InputPeerUser
 from telethon import TelegramClient
-import threading, os 
+import threading, os, telebot
 import public_ip as ip 
 from datetime import datetime 
 from dotenv import load_dotenv
