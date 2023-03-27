@@ -2,3 +2,4 @@ public_ip
 telebot 
 telethon 
 python-dotenv
+streamlit
