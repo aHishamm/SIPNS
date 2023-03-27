@@ -1,6 +1,6 @@
 # SIPNS 
 I created SIPNS (Server IP Notifier System) as a simple side project to always notify me of the changing public IP address of my home server. 
-The application checks the status of my server's public IP address every 45 minutes. If the IP address is updated, a notification is sent to my phone using a Telegram bot. The purpose of creating this is to always be able to ssh into my server at home, and have a record of all the changes. 
+The application checks the status of my server's public IP address every 12 hours. If the IP address is updated, a notification is sent to my phone using a Telegram bot. The purpose of creating this is to always be able to ssh into my server at home, and have a record of all the changes. 
 
 #### Installation 
 ```bash
