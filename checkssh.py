@@ -5,6 +5,7 @@ import threading, os, telebot
 import public_ip as ip 
 import streamlit as st 
 from datetime import datetime 
+import time
 from dotenv import load_dotenv
 load_dotenv()
 #loading the environment variables 
@@ -13,13 +14,8 @@ api_hash = os.getenv("API_HASH")
 phone_number = os.getenv("PHONE_NUMBER")
 bToken = os.getenv("BOT_TOKEN")
 user_id = os.getenv("USER_ID")
-
-current_add = ''  
 def run_periodically(): 
-    global current_add
-    threading.Timer(7200.0,run_periodically).start() #IP is checked every 12 hours / 43200 seconds
-    if current_add != ip.get(): 
-        current_add = ip.get() 
+    while True: 
         #connecting to Telegram
         client = TelegramClient('session',api_id,api_hash)
         client.connect() 
@@ -33,5 +29,6 @@ def run_periodically():
             print(e) 
         client.disconnect() 
         print("Message Sent")
-        print("New server IP address: ",current_add)
+        print("New server IP address: ",ip.get())
+        time.sleep(28800.0) #sleep for 8 hours 
 run_periodically()
